@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // SETIAP USER PUNYA BANYAK ACCUNT
+    public function SocialAccounts()
+    {
+        return $this->hasMany(SosialAccount::class);
+    }
 }
